@@ -39,8 +39,9 @@ export default class Listed {
         list[options.name] = this;
         const constructorName = String(this.constructor.name);
 
-        if (!window[constructorName]) {
-            window[constructorName] = {
+        const globalWindow = window as any;
+        if (globalWindow && !globalWindow[constructorName]) {
+            globalWindow[constructorName] = {
                 List: list
             }
         }

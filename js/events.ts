@@ -208,4 +208,10 @@ export default class Events {
     }
 }
 
-if (window) window.Events = Events;
+declare global {
+    interface Window {
+        GameEvents: typeof Events;
+    }
+}
+
+if (window) window.GameEvents = Events;

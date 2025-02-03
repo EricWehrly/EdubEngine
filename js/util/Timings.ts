@@ -165,4 +165,10 @@ export default class Timing {
     }
 }
 
-if(window) window.Timing = Timing;
+declare global {
+    interface Window {
+        Timing: typeof Timing;
+    }
+}
+
+if (window) window.Timing = Timing;

@@ -8,4 +8,10 @@ export default function addCustomStyle(cssString: string) {
     CUSTOM_STYLE_NODE.appendChild(domElement);
 }
 
-if(window) window.addCustomStyle = addCustomStyle;
+declare global {
+    interface Window {
+        addCustomStyle: (cssString: string) => void;
+    }
+}
+
+if (window) window.addCustomStyle = addCustomStyle;

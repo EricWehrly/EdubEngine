@@ -20,4 +20,10 @@ export default class Character extends Entity {
     }
 }
 
-if(window) window.Character = Character;
+declare global {
+    interface Window {
+        Character: typeof Character;
+    }
+}
+
+if (window) window.Character = Character;

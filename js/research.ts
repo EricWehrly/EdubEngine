@@ -97,4 +97,10 @@ export default class Research extends Listed {
     }
 }
 
+declare global {
+    interface Window {
+        Research: typeof Research;
+    }
+}
+
 if (window) window.Research = Research;

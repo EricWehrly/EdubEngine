@@ -206,4 +206,10 @@ export default class Menu extends UIElement {
     }
 }
 
-if(window) window.Menu = Menu;
+declare global {
+    interface Window {
+        Menu: typeof Menu;
+    }
+}
+
+if (window) window.Menu = Menu;

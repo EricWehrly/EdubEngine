@@ -54,7 +54,7 @@ export default class GameMap {
 
         if(GameMap._instance == null) {
             GameMap._instance = this;
-            window.map = this;
+            // window.map = this;
         }
 
         this._seed = new Seed(seed.Random());

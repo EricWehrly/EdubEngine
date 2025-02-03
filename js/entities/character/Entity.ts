@@ -386,4 +386,10 @@ export default class Entity extends WorldObject {
     }
 }
 
-if(window) window.CHARACTER_LIST = Entity.List;
+declare global {
+    interface Window {
+        CHARACTER_LIST: Entity[];
+    }
+}
+
+if (window) window.CHARACTER_LIST = Entity.List;

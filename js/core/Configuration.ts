@@ -46,4 +46,10 @@ export default class Configuration {
     }
 }
 
+declare global {
+    interface Window {
+        Configuration: Configuration;
+    }
+}
+
 window.Configuration = Configuration.Instance;

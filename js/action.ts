@@ -252,4 +252,10 @@ new Action({
     }
 });
 
-if(window) window.Action = Action;
+declare global {
+    interface Window {
+        Action: typeof Action;
+    }
+}
+
+if (window) window.Action = Action;
